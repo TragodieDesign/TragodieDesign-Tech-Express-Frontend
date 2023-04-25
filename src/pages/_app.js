@@ -2,12 +2,13 @@ import { GlobalStyle } from '../styles/global-styles'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../styles/theme'
 import '@/styles/globals.css'
-
+import {Header} from '../components/All'
 
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
     <GlobalStyle/>
+    <Header/>
   <Component {...pageProps} />
   </ThemeProvider>
   )
