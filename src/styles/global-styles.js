@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 *{
     margin:0;
@@ -14,11 +14,8 @@ html{
     }
 }
 
-
-
-
 body{
-    font-family: ${({ theme})=> theme.fonts.font1};
+    font-family: "'Montserrat', sans-serif;"
     font-size:1rem;
 }
 

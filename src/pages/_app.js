@@ -9,12 +9,12 @@ import {Header} from '../components/All'
 export default function App({ Component, pageProps }) {
   return (
       <Provider store={store}>
-            <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
     <GlobalStyle/>
     <Header/>
   <Component {...pageProps} />
   </ThemeProvider>
-      </Provider>
+      </Provider>      
   )
 
 }

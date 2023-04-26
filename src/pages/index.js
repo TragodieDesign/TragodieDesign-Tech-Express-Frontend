@@ -1,10 +1,13 @@
-import { Container } from 'react-bootstrap'
+import { Highlights } from '@/components/All'
+
 
 const Home = () => {
 	return (
-		<Container>
-			<h1>oi</h1>
-		</Container>
+		<Highlights/>
+
+		
+			
+		
 	)
 }
 
