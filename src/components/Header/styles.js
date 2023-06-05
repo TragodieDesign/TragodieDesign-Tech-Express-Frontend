@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const Navbar = styled.nav`
 display: flex;
 justify-content: space-between;
@@ -11,4 +12,18 @@ position: fixed;
 width:100%;
 font-family: 'Montserrat', sans-serif;
 color: white;
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+`
+export const Logo = styled.img`
+  height: 2em;
 `

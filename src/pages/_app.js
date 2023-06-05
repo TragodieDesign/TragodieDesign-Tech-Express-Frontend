@@ -4,7 +4,8 @@ import { GlobalStyle } from '../styles/global-styles'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../styles/theme'
 import '@/styles/globals.css'
-import {Header} from '../components/All'
+import {Header, Footer} from '../components/All'
+
 
 export default function App({ Component, pageProps }) {
   return (
@@ -13,8 +14,8 @@ export default function App({ Component, pageProps }) {
     <GlobalStyle/>
     <Header/>
   <Component {...pageProps} />
+  <Footer/>
   </ThemeProvider>
       </Provider>      
   )
-
 }

@@ -1,28 +1,29 @@
 import styled from 'styled-components'
+import styles from './styles'
+import Image from 'next/image'
+import { HeaderProfile } from '../All'
+import Nav from "../Nav"
+import Logo from './Logo'
+import { Container } from 'react-bootstrap'
+
 
 const HeaderContainer = styled.header`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 1rem;
+  padding:  1rem 0 1rem 0;
   background-color: #353535;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   width:100%;
   font-family: 'Montserrat', sans-serif;
+  font-family: 600;
   color: white;
 `
 
-const Logo = styled.img`
-  height: 60px;
-`
 
-const Nav = styled.nav`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
-`
+
+
 
 const Link = styled.a`
   font-size: 1.2rem;
@@ -35,17 +36,14 @@ const Link = styled.a`
 
 export default function Header() {
   return (
-    <HeaderContainer>
-      <Logo src="/Site-e-commerce/img/logo/4x/Logo TEch Express.png" alt="TechExpress" />
-      <Nav>
-      <Link href="/Site-e-commerce/index.html">Home</Link>
-        <Link href="/Site-e-commerce/Categorias/celulares.html">Celulares</Link>
-        <Link href="/Site-e-commerce/Categorias/eletronicos.html">Eletrônicos</Link>
-        <Link href="/Site-e-commerce/Categorias/informatica.html">Informática</Link>
-        <Link href="/Site-e-commerce/Carrinho/index.html">Carrinho</Link>
-        <Link href="/Site-e-commerce/Finalizar/index.html">Finalizar Compra</Link>
-        <Link href="/Site-e-commerce/Sobre/index.html">Sobre nós</Link>
-      </Nav>
+    <Container>
+          <HeaderContainer>
+      
+      <Logo/>
+      <Nav/>
+      <HeaderProfile/>
+      
     </HeaderContainer>
+    </Container>
   )
 }
