@@ -1,12 +1,14 @@
-import { Highlights } from '@/components/All'
-import { Footer} from '@/components/All'
+import { Highlights, Card} from '@/components/All'
+
+
 
 
 const Home = () => {
 	return (
 		<div>
+			<main>
 			<Highlights/>
-			
+			</main>
 		</div>
 		
 		

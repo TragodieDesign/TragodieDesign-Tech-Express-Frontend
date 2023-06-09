@@ -19,6 +19,8 @@ const HeaderContainer = styled.header`
   font-family: 'Montserrat', sans-serif;
   font-family: 600;
   color: white;
+  z-index: 90;
+  
 `
 
 
