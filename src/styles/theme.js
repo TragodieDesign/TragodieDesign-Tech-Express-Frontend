@@ -1,7 +1,7 @@
 export const theme ={
     fonts:{
-    font1: "'Poppins',sans-serif'",
-    font2: "'Playfair Display',sans-serif'"
+    font1: "'Montserrat',sans-serif'",
+    font2: "'Roboto',sans-serif'"
 },
 sizes:{
     h1:'3rem',

@@ -1,16 +1,21 @@
-import { Highlights, Card} from '@/components/All'
+import { Highlights,Heading, Card, TitleBox, SliderList} from '@/components/All'
+
 
 
 
 
 const Home = () => {
+	
 	return (
-		<div>
-			<main>
-			<Highlights/>
-			</main>
-		</div>
-		
+
+<div className='main'>
+	
+<Highlights/>
+			<SliderList title='Eletrônicos'/>
+</div>
+
+
+
 		
 				
 		

@@ -1,45 +1,53 @@
 import { Col, Container, Row } from 'react-bootstrap'
 import {Card} from 'src/components/All'
-import img from 'public/Iphone_apple.jpg'
+
 import * as Styled from './styles'
+import {useEffect, useState} from 'react'
+import {Http} from 'src/Http/api'
+
 
 const Highlights = ()=>{
+    const [data, setData] = useState([])
+const get_products =async () =>{
+	try{
+		const response =await Http.get(
+			'products'
+		)
+		setData(response.data)
+		}
+		catch(Error){
+			console.log(Error)
+		}
+	
+}
+
+	
+useEffect(() =>{
+	get_products()
+},[])
+
     return (
         <Container>
             <Styled.Flexrow>
-                <Col lg={4}>
-                    <Card 
-                        img={img} 
-                        title="Iphone 14"
-                        price= {parseInt(8999)}
-                        alt="Iphone"
-                        w="600"
-                        h="600" 
-                    />
-                               
-                </Col>
-                <Col lg={4}>
-                    <Card 
-                        img={img} 
-                        title="Iphone 14"
-                        price= {parseInt(8999)}
-                        alt="Iphone"
-                        w="600"
-                        h="600" 
-                    />
-                               
-                </Col>
-                <Col lg={4}>
-                    <Card 
-                        img={img} 
-                        title="Iphone 14"
-                        price= {parseInt(8999)}
-                        alt="Iphone"
-                        w="600"
-                        h="600" 
-                    />
-                               
-                </Col>
+                {data?.map((products)=>{
+                    return(
+                <Col lg={4} key={products.id}>
+                <Card 
+                    img={products.image.alternativeText} 
+                    alt={products.image.name}
+                    title={products.title}
+                    price= {parseInt(products.price)}
+                    alt="Iphone"
+                    w="600"
+                    h="600" 
+                />
+                           
+            </Col>
+                    )
+
+            })}
+
+
             </Styled.Flexrow>
         </Container>
     )

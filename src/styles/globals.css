@@ -87,8 +87,7 @@ body {
 
 body {
 margin: 0;
-padding: 0;
-
+padding: 0 ;
 
 }
 main{
@@ -98,7 +97,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+.main{
+  padding: 10rem 1rem 1rem 1rem;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

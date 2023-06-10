@@ -41,7 +41,9 @@ export default function Header() {
     <Container>
           <HeaderContainer>
       
+      <h1>
       <Logo/>
+      </h1>
       <Nav/>
       <HeaderProfile/>
       
