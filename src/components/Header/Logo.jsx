@@ -9,6 +9,7 @@ const Logo =() => {
     <Link href={'./'}>
     <Image 
     src={'https://res.cloudinary.com/dx92aia72/image/upload/v1682558962/ID%20visual/logo_branco_pmvt8w.png'} 
+    alt="Phantom Tech"
     width={75} 
     height={75}/>
     
