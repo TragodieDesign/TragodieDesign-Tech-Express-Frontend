@@ -34,7 +34,7 @@ useEffect(() =>{
                 <Col lg={4} key={products.id}>
                 <Card 
                     img={products.image.alternativeText} 
-                    alt={products.image.caption}
+                    alt="produtos"
                     title={products.title}
                     price= {parseInt(products.price)}
                     w="600"
