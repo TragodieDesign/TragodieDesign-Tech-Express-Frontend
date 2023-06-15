@@ -48,7 +48,7 @@ const SliderList = (props)=>{
                     slidesPerView={4}
                     >      
                     {data?.map((product)=>(
-                                <SwiperSlide>
+                                <SwiperSlide key={products.id}>
                                 <Card
                                     img={product.image.alternativeText} 
                                     alt={product.image.name}
