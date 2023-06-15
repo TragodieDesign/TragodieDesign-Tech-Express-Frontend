@@ -1,4 +1,4 @@
-import { Highlights,Heading, Card, TitleBox, SliderList} from '@/components/All'
+import { Highlights,Heading, Card, TitleBox, SliderList, Banners} from '@/components/All'
 
 
 
@@ -9,9 +9,9 @@ const Home = () => {
 	return (
 
 <div className='main'>
-	
+<Banners/>
 <Highlights/>
-			<SliderList title='Eletrônicos'/>
+<SliderList title='Eletrônicos' fetch='eletronicos'/>
 </div>
 
 

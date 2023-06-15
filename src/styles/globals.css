@@ -98,7 +98,7 @@ a {
   text-decoration: none;
 }
 .main{
-  padding: 10rem 1rem 1rem 1rem;
+  padding: 100px 0 0 0;
 }
 @media (prefers-color-scheme: dark) {
   html {

@@ -8,6 +8,7 @@ import Nav from "../Nav"
 import HeaderProfile from "../HeaderProfile"
 import SliderList from "../Products/SliderList"
 import Section from '../Utils/Section'
+import Banners from '../Banners'
 export{TitleBox,
         Header,
         Nav, 
@@ -18,5 +19,6 @@ export{TitleBox,
         Highlights, 
         HeaderProfile,
         Section,
+        Banners
             
     }
