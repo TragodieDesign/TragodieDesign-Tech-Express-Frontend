@@ -11,7 +11,7 @@ const Highlights = ()=>{
 const get_products =async () =>{
 	try{
 		const response =await Http.get(
-			'products'
+			'products?&_sort=createdAt:DESC&_limit=3'
 		)
 		setData(response.data)
 		}
@@ -31,8 +31,8 @@ useEffect(() =>{
             <Styled.Flexrow>
                 {data?.map((products)=>{
                     return(
-                <Col lg={4} key={products.id}>
-                <Card 
+                <Col lg={4} key={products.id} >
+                <Card products={products}
                     img={products.image.alternativeText} 
                     alt="produtos"
                     title={products.title}

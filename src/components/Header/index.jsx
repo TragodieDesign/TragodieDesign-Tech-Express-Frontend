@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 import styles from './styles'
 import Image from 'next/image'
-import { HeaderProfile } from '../All'
+import { HeaderProfile, AuthContext } from '../All'
 import Nav from "../Nav"
 import Logo from './Logo'
 import { Container } from 'react-bootstrap'
+import {useContext} from 'react'
+
 
 
 const HeaderContainer = styled.header`
@@ -37,6 +39,7 @@ const Link = styled.a`
 `
 
 export default function Header() {
+  const{user} = useContext(AuthContext)
   return (
     <Container>
           <HeaderContainer>

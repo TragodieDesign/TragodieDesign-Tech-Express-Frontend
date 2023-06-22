@@ -4,18 +4,42 @@ import { GlobalStyle } from '../styles/global-styles'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../styles/theme'
 import '@/styles/globals.css'
-import {Header, Footer} from '../components/All'
+import {TitleBox,
+  Header,
+  Nav, 
+  SliderList,
+  Footer, 
+  Heading, 
+  Card, 
+  Highlights, 
+  HeaderProfile,
+  Section,
+  Banners,
+  Individual,
+  SingleProduct,
+  AllProducts
+  } from '../components/All'
+  import {AuthProvider, AuthContext} from '../../context/AuthContext'
+
 
 
 export default function App({ Component, pageProps }) {
   return (
-      <Provider store={store}>
+    <AuthProvider>    
     <ThemeProvider theme={theme}>
     <GlobalStyle/>
     <Header/>
   <Component {...pageProps} />
   <Footer/>
-  </ThemeProvider>
-      </Provider>      
+  </ThemeProvider> 
+    </AuthProvider> 
+    /**
+     * removi o store Provider, 
+     * caso ocorra um erro, 
+     * corrigir envelopando a aplicação com
+     * <Provider store={store}>
+     * </Provider>
+     * 
+     *  */   
   )
 }

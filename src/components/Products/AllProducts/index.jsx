@@ -1,23 +1,13 @@
-import { Highlights,Heading, Card, TitleBox, SliderList, Banners, AllProducts} from '@/components/All'
 
-
+import { fromImageToUrl, API_URL } from '@/Http/urls'
 import { propTypes } from 'prop-types'
 import Image from 'next/image';
-import {Container, Row, Button} from "react-bootstrap"
-import { fromImageToUrl, API_URL } from '@/Http/urls'
+import {Container, Row, Button} from 'react-bootstrap'
 
-
-
-const Home = ({products}) => {
-	
-	return (
-
-<div className='main'>
-<Banners/>
-<Highlights/>
-<SliderList title='Eletrônicos' fetch='eletronicos'/>
-
-{products.map(product=>(
+const AllProducts =({products})=>{
+    return(
+        <div>
+                {products.map(product=>(
             <div key={product.name} >
                 <div>
                     <Image
@@ -37,19 +27,10 @@ const Home = ({products}) => {
         ))
             
         }
+        </div>
+        
+    )
 
-
-</div>
-
-
-
-		
-				
-		
-
-			
-		
-	)
 }
 export async function getStaticProps(){
     //Fetch products
@@ -63,5 +44,4 @@ export async function getStaticProps(){
         }
     }
 }
-
-export default Home
+export default AllProducts

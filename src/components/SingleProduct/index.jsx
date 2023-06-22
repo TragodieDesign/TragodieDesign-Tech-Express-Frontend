@@ -2,7 +2,7 @@ import {useEffect, useState, useCallback} from 'react'
 import {Http} from 'src/Http/api'
 import PropTypes from 'prop-types'
 import { Col, Container, Row } from 'react-bootstrap'
-import {Section, TitleBox, Heading,Card} from 'src/components/All'
+import {Section, TitleBox, Heading,Individual} from 'src/components/All'
 import * as Styled from './styles'
 import { propTypes } from 'prop-types'
 import { Navigation} from 'swiper';
@@ -18,8 +18,8 @@ const SliderList = (props)=>{
     const [data, setData] = useState([])
     const getProducts = useCallback(async()=>{
         try{
-            const response = await Http.get(
-                `products?_where[0][categories.slug]=${props.fetch}&_sort=createdAt:DESC&_limit=6`
+            const response = await fetch(
+                `${Http}/products`
             )
             setData(response.data)
             console.log(response.data)
@@ -52,9 +52,9 @@ const SliderList = (props)=>{
 
                                 <SwiperSlide>
                                     
-                                    <Container key={products.id} >
+                                    <Container key={products.slug} >
                                         
-                                        <Card
+                                        <Individual
                                         products={products}
                                         img={products.image.alternativeText} 
                                         alt={products.image.name}
@@ -64,7 +64,7 @@ const SliderList = (props)=>{
                                         w="600"
                                         h="600"
                                     >
-                                    </Card> 
+                                    </Individual> 
                                         
    
                                     </Container>

@@ -99,6 +99,10 @@ a {
 }
 .main{
   padding: 100px 0 0 0;
+
+}
+.thumbnail{
+  max-width: 20em;
 }
 @media (prefers-color-scheme: dark) {
   html {

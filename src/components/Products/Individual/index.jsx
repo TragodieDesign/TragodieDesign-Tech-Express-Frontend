@@ -6,7 +6,7 @@ import { RightArrowAlt } from '@styled-icons/boxicons-regular/RightArrowAlt';
 import { useEffect, useState } from 'react';
 import { Http } from 'src/Http/api';
 import Link from 'next/link'
-const Card = (props) => {
+const Individual = (props) => {
   const [data, setData] = useState([]);
 
   const getProducts = async () => {
@@ -23,7 +23,7 @@ const Card = (props) => {
   }, []);
 
   return (
-    <Styled.Card>
+    <Styled.Individual>
       <Styled.Box className='card-box'>
         <Image
           className='img-fallback'
@@ -58,11 +58,11 @@ const Card = (props) => {
           <Styled.Price>R$ {props.price}</Styled.Price>
         </Styled.Content>
       </Styled.Box>
-    </Styled.Card>
+    </Styled.Individual>
   );
 };
 
-Card.propTypes = {
+Individual.propTypes = {
   img: PropTypes.string,
   alt: PropTypes.string,
   w: PropTypes.string,
@@ -71,4 +71,4 @@ Card.propTypes = {
   price: PropTypes.number,
 };
 
-export default Card;
+export default Individual;

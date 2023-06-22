@@ -10,7 +10,9 @@ const elements = {
     h6: 'h6',
 } 
 const Heading =({type, children, ...props}) =>{
-    return React.createElement(elements[type] || elements.h1,props,children)
+    return (
+        <h1></h1>
+    )
 }
 Heading.defaultProps={
     type:'h1'
